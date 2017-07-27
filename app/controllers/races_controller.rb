@@ -4,7 +4,7 @@ class RacesController < ApplicationController
     if @race.valid?
       @race.save
     else
-      explode
+
     end
 
   end
@@ -39,6 +39,6 @@ class RacesController < ApplicationController
   private
 
   def race_params
-    params.require(:race).permit(:name, :distance, :time)
+    params.require(:race).permit(:name, :distance)
   end
 end
